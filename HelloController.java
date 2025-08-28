@@ -3,7 +3,7 @@ public class HelloController{
 
     @GetMapping("/hello")
     public String hello(){
-    return "Hello World!"
+    return new HelloResponse( "Hello World!");
     }
     @PostMapping("/hello")
     public String helloPost(@RequestBody String name){
