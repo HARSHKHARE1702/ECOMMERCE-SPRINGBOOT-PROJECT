@@ -1,10 +1,13 @@
 @RestController
 public class HelloController{
 
-    @GetMapping("/hello")
-    public String hello(){
-    return new HelloResponse( "Hello World!");
+    /Users/{userId}
+    /Users/1
+    @GetMapping("/hello/{name}")
+    public  HelloResponse helloParam(@PathVariable_String name){
+    return new HelloResponse( "Hello,"+name);
     }
+    
     @PostMapping("/hello")
     public String helloPost(@RequestBody String name){
     return "Hello" + name +"!";
