@@ -1,6 +1,7 @@
 @RestController
 public class CategoryController{
- 
+ @Autowired
+ private CategoryService categoryService
   private List<Category> categories = new ArrayList<>();//Storing a category in a list
  //Get all Category from List
  @GetMapping("/api/public/categories")
