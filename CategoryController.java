@@ -1,11 +1,13 @@
 @RestController
 public class CategoryController{
  
-  private List<Category> categories = new ArrayList<>();
-  @GetMapping("/api/public/categories")
+  private List<Category> categories = new ArrayList<>();//Storing a category in a list
+ //Get all Category from List
+ @GetMapping("/api/public/categories")
   public List<Category> getAllCategories{
   return categories;
 }
+ //Post all Category from List
 @PostMapping("/api/public/categories")
  public String createCategory(@RequestBody Category category){
  categories.add(Category)
