@@ -1,10 +1,7 @@
-public class CategoryServiceImpl implements CategoryService{
-  private CategoryService categoryService;
-  
-  
-  
-  
+  @Service
+  public class CategoryServiceImpl implements CategoryService{
   private List<Category> categories = new ArrayList<>();
+  private CategoryService categoryService;
   @Override
   public list<Category> getAllCategories(){
     return categories;
