@@ -14,3 +14,15 @@ public class CategoryController{
  categories.add(Category)
  return "Category added Sucessfully"
 }
+@DeleteMapping("api/admin/categories/{CategoryId})
+ public ResponseEntity<String>deleteCategory(@PathVariable Long categoryId){
+  try{
+   String status = categoryService.deleteCategory(categoryId);
+   return new ResponseEntity<>(Status,HttpsStatus.OK);
+  }
+  Catch(ResponseStatusException e){
+   return new ResponseEntity<>(e.getReason(),e.getStatusCode());
+  }
+ }
+}
+    
