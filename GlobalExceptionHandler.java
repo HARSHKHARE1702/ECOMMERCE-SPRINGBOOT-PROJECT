@@ -18,6 +18,6 @@ return new ResponseEntity<Map<String,String>(response,HttpStatus.BAD_REQUEST);
 @ExceptionaHandler(APIException.class)
   public ResponseEnity<String> myAPIException(APIException e){
   String Message=e.getMessage();
-return new ResponseEntity<>(Message,HTTPStatus.NotFound);
+return new ResponseEntity<>(Message,HTTPStatus.Bad_Request);
 }
 }
