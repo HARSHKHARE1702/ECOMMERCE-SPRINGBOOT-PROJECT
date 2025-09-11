@@ -15,3 +15,9 @@ return new ResponseEntity<Map<String,String>(response,HttpStatus.BAD_REQUEST);
   public ResponseEntity<String> myResourceNotFoundExcception(ResourceNotFoundException e );
   String Message = e.getMessage();
   return new ResponseEnity<>(Message,HTTPStatus.NotFound);
+@ExceptionaHandler(APIException.class)
+  public ResponseEnity<String> myAPIException(APIException e){
+  String Message=e.getMessage();
+return new ResponseEntity<>(Message,HTTPStatus.NotFound);
+}
+}
